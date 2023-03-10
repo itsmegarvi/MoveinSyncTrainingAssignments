@@ -1,3 +1,5 @@
+package com.Module2;
+
 class CommandTest{
     public static void main(String[] args) {
         if(args.length == 2) {
