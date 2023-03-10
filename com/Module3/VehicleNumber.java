@@ -1,4 +1,4 @@
-package Assignment_Module3;
+package com.Module3;
 
 import java.util.ArrayList;
 import java.util.Scanner;
