@@ -21,6 +21,5 @@ public class Constructor {
     public static void main(String[] args) {
         Product1 p = new Product1("p105","Brush",45.25);
         p.disp();
-
     }
 }
