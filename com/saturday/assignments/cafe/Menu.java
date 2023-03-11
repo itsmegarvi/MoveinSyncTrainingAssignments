@@ -14,5 +14,6 @@ public class Menu{
     List<Foods> l = Arrays.asList(Foods.values());
     public void disp(){
         l.forEach(System.out::println);
+        System.out.println(l); //Testing out wich one to keep will take out one later
     }
 }
