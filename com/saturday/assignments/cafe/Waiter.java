@@ -2,13 +2,10 @@ package com.saturday.assignments.cafe;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.saturday.assignments.cafe.Menu.Foods;
 
 public class Waiter {
-    List<List<Foods>> order = new ArrayList<>();
-    public Waiter(List<Foods> f){
-        order.add(f);
-    } //This approach might not work considering the order might keep coming later on.
+
+     //This approach might not work considering the order might keep coming later on.
     // We cant be sending the same list with just addition of one order everytime to chef.
 
     //What can be the alternatives:
