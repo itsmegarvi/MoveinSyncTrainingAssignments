@@ -18,10 +18,10 @@ public class Chef {
         return lastCompletedTime;
     }
 
-    public void processorder(int ordernum, int prevEndTime){
-        Order order = new Order(ordernum);
+    public void processorder(int orderNum, int prevEndTime){
+        Order order = new Order(orderNum);
         if(!Order.getOrders().isEmpty()) {
-            List<Integer> l = order.getOrders(ordernum-1);
+            List<Integer> l = order.getOrders(orderNum-1);
             PriorityQueue<Integer> pq = new PriorityQueue<>(numChefs);
             pq.clear();
 
