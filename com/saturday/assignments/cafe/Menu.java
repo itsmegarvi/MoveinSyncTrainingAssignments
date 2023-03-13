@@ -1,8 +1,5 @@
 package com.saturday.assignments.cafe;
 
-import java.awt.*;
-import java.util.HashMap;
-import java.util.Map;
 
 public class Menu{
     public enum MenuItem {

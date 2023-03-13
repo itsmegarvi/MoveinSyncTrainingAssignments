@@ -6,24 +6,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Order {
-    int ordernumber;
-    public List<List<Menu.MenuItem>> items = new ArrayList<List<Menu.MenuItem>>();
+    private int ordernumber;
+    protected static List<List<Integer>> orders = new ArrayList<>();
 
     public Order(int orderNumber) {
         this.ordernumber = orderNumber;
+
     }
 
     public void addItem(List<Menu.MenuItem> item)
     {
-        items.add(item);
+        List<Integer> l = new ArrayList<>();
+        for(Menu.MenuItem i:item){
+            l.add(i.getPreparationTime());
+        }
+        orders.add(l);
 
     }
 
-    public List<List<Menu.MenuItem>> getItems() {
-        return items;
+    public int getOrdernumber() {
+        return ordernumber;
     }
 
-//    public List<Menu.MenuItem> getItems(int i) {
-//        return
-//    }
+    public static List<List<Integer>> getOrders() {
+        return orders;
+    }
+
+    public List<Integer> getOrders(int i) {
+        return orders.get(i);
+    }
 }

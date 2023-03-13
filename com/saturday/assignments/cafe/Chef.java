@@ -20,7 +20,7 @@ public class Chef {
 
     public void processorder(int ordernum, int prevEndTime){
         Order order = new Order(ordernum);
-        if(Order.orders.isEmpty()) {
+        if(!Order.getOrders().isEmpty()) {
             List<Integer> l = order.getOrders(ordernum-1);
             PriorityQueue<Integer> pq = new PriorityQueue<>(numChefs);
             pq.clear();

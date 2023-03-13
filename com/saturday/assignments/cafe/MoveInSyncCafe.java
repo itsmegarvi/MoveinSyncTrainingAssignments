@@ -8,7 +8,6 @@ public class MoveInSyncCafe {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("No.of chefs");
-        Waiter w = new Waiter();
         int chefs = sc.nextInt();
         Chef chef = new Chef(chefs);
         int prevEndTime = 0;
@@ -31,10 +30,13 @@ public class MoveInSyncCafe {
                         System.out.println("Your order item not in Menu.");
                     }
                 }
-                w.takeorder(orderItems);
+                Waiter.takeorder(orderItems);
                 chef.processorder(Waiter.getOrdernumber(), prevEndTime); // pass the time of the last completed order
                 prevEndTime = chef.getLastCompletedTime();
             }
+
+
+
         }
     }
 }
