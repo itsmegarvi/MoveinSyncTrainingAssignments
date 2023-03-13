@@ -1,16 +1,40 @@
 package com.saturday.assignments.cafe;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class MoveInSyncCafe {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("No.of chefs");
+        Waiter w = new Waiter();
         int chefs = sc.nextInt();
-//        Waiter w = new Waiter()
-        //just thought of something
-        //If we are making a constructor for waiter and making it do the job of reaching to the chef it will take a lot of objects
-        //And that is inefficient, so this should be a function 1 waiter unless specified presence of more
-
+        Chef chef = new Chef(chefs);
+        int prevEndTime = 0;
+        while (true){
+            System.out.println("Would you like to order: yes/no");
+            String s = sc.next();
+            if(s.equals("no")){
+                break;
+            } else if (s.equals("yes")) {
+                System.out.println("Enter Order: ");
+                sc.nextLine();
+                String order = sc.nextLine();
+                List<Menu.MenuItem> orderItems = new ArrayList<>();
+                String[] orderSplit = order.split(" ");
+                for (String item : orderSplit) {
+                    try {
+                        Menu.MenuItem menuItem = Menu.MenuItem.valueOf(item);
+                        orderItems.add(menuItem);
+                    } catch (IllegalArgumentException e) {
+                        System.out.println("Your order item not in Menu.");
+                    }
+                }
+                w.takeorder(orderItems);
+                chef.processorder(Waiter.getOrdernumber(), prevEndTime); // pass the time of the last completed order
+                prevEndTime = chef.getLastCompletedTime();
+            }
+        }
     }
 }
