@@ -26,12 +26,12 @@ public class Chef {
             pq.clear();
 
             l.sort(Integer::compare);
-            for(int k=l.size() -1;k>=0;k--){
+            for(int i=l.size() -1;i>=0;i--){
                 if(pq.size() < numChefs){
-                    pq.add(l.get(k));
+                    pq.add(l.get(i));
                 }else{
                     int minTime = pq.poll();
-                    pq.add(minTime + l.get(k));
+                    pq.add(minTime + l.get(i));
                 }
             }
             while (pq.size() != 1){

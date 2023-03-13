@@ -17,6 +17,8 @@ public class MoveInSyncCafe {
             if(s.equals("no")){
                 break;
             } else if (s.equals("yes")) {
+                System.out.println("Here is the Menu");
+                Menu.MenuItem.display();
                 System.out.println("Enter Order: ");
                 sc.nextLine();
                 String order = sc.nextLine();

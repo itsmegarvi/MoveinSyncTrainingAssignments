@@ -11,6 +11,7 @@ public class Waiter {
 //    private static LocalTime lastlogtime;
 
     private Waiter(){
+
         throw new IllegalStateException("Utility class");
     }
 
@@ -18,8 +19,8 @@ public class Waiter {
         ordernumber++;
         Order order = new Order(ordernumber);
         order.addItem(items);
-        LocalTime currenttime = LocalTime.now();
-        System.out.println("Order number " + ordernumber + " recieved at " + currenttime);
+        LocalTime currentTime = LocalTime.now();
+        System.out.println("Order number " + ordernumber + " recieved at " + currentTime);
     }
 
     public static int getOrdernumber() {

@@ -1,6 +1,10 @@
 package com.saturday.assignments.cafe;
 
 
+import java.util.Arrays;
+
+import static java.lang.System.out;
+
 public class Menu{
     public enum MenuItem {
         SANDWICH( 5),
@@ -16,6 +20,10 @@ public class Menu{
 
         public int getPreparationTime(){
             return preparationTime;
+        }
+
+        public static void display(){
+            out.println(Arrays.asList(MenuItem.values()));
         }
 
     }
