@@ -12,3 +12,9 @@
 
     //Also am in love with big monitor coding
     // I want it I want it I want it
+
+    __________________________
+    main
+    //just thought of something
+            //If we are making a constructor for waiter and making it do the job of reaching to the chef it will take a lot of objects
+            //And that is inefficient, so this should be a function 1 waiter unless specified presence of more
